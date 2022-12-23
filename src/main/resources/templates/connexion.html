@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Connexion</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+	<link rel="stylesheet" th:href="@{/resources/css/style5.css}">
+
+	<style>
+		body,
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			font-family: "Karma", sans-serif
+		}
+
+		.w3-bar-block .w3-bar-item {
+			padding: 20px
+		}
+	</style>
+	<link href="style2.css" rel="stylesheet">
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+
+
+		<img src="/resources/img/logo.png" width="100" height="100" class="d-inline-block align-top" alt="">
+
+
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active">
+					<a class="nav-link" href="index">Acceuil <span class="sr-only"><span></a>
+				</li>
+
+				<li class="nav-item">
+					<a class="nav-link" href="propos">A Propos</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="emplacement">Emplacements</a>
+				</li>
+				<div class="dropdown">
+					<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+						data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Nos Services
+					</button>
+					<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+						<a class="dropdown-item" href="Domiciliation">Coworking</a>
+						<a class="dropdown-item" href="Cowork">Coworking</a>
+					</div>
+				</div>
+
+			</ul>
+			<form class="form-inline my-2 my-lg-0">
+				<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+				<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+			</form>
+			<li class="nav-item">
+				<a class="nav-link" style="color:white" href="connexion">Connexion</a>
+			</li>
+			<img src="/resources/img/icon contact.png" width="30" height="30" class="d-inline-block align-top" alt="">
+
+
+		</div>
+	</nav>
+
+
+
+
+
+	<!-- !PAGE CONTENT! -->
+	<h6><a href="index">
+			<- Retour</a>
+	</h6>
+	<div class="titre">
+		<h1>CONNEXION | </h1>Vous souhaitez creer un compte?<a href="inscription">Inscrivez-vous</a>
+	</div>
+	<form th:action="account" method="post">
+
+
+		<div class="container">
+
+			<ul style="list-style-type:none;">
+				<li> <label for="uname"><b>Adresse email</b></label></li>
+				<li><input type="email" placeholder="exemple@domaine.com" name="email" id="email" required></li>
+				<li><label for="psw"><b>Mot de passe</b></label></li>
+				<li><input type="password" placeholder="Entrer mot de passe" name="password" id="password"  required></li>
+				<br><br><br><br><br><br><br><br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<label>
+					<input type="checkbox" checked="checked" name="remember"> Se souvenir de moi
+				</label>
+				<button type="submit">Valider</button>
+			</ul>
+			<div class="imgcontainer">
+				<img src="/resources/img/Conn.png" />
+			</div>
+
+		</div>
+
+
+
+	</form>
+
+
+
+
+
+	<!-- Footer -->
+	<footer style="background-color: rgb(58, 53, 53);width: 100%;" class="w3-row-padding w3-padding-32">
+		<div style="color: white;" class="w3-third">
+			<h3>About Company</h3>
+			<img src="/resources/img/logo.png" class="w3-left w3-margin-right" style="width:100px">
+
+		</div>
+
+		<div style="color: white;" class="w3-third">
+			<h3>Informations</h3>
+			<ul type="circle" class="w3-ul w3-hoverable">
+				<li class="w3-padding-16">
+
+					<span class="w3-large"><a class="dropdown-item" href="propos"></a>A Propos</span><br>
+				</li>
+				<li class="w3-padding-16">
+
+					<span class="w3-large"><a class="dropdown-item"
+							href="Domiciliation"></a>Domiciliation</span><br>
+				</li>
+				<li>
+					<span class="w3-large"><a class="dropdown-item" href="Cowork"></a>Coworking</span><br>
+
+				</li>
+				<li>
+					<span class="w3-large"><a class="dropdown-item" href="connexion"></a>Connexion</span><br>
+
+				</li>
+			</ul>
+		</div>
+
+		<div style="color: white;" class="w3-third w3-serif">
+			<h3>Nos Cordonnées</h3>
+			<ul style="list-style-type: none;">
+				<li><img src="/resources/img/phone icon.png" style="width:30px ;background-color: white;" /></li><br>
+				<li><img src="/resources/img/mail.png" style="width:30px ;background-color: white;" /></li><br>
+				<li><img src="/resources/img/lieu.png" style="width:30px ; background-color: white;" /></li><br>
+
+
+				<li><img src="/resources/img/fcb.png" style="width:30px ;background-color: white;" /></li><br>
+				<li><img src="/resources/img/insta.png" style="width:30px ;background-color: white;" /></li><br>
+				<li><img src="/resources/img/twit.png" style="width:30px ; background-color: white;" /></li>
+
+			</ul>
+		</div>
+	</footer>
+
+	<!-- End page content -->
+	</div>
+
+	<script>
+		// Script to open and close sidebar
+		function w3_open() {
+			document.getElementById("mySidebar").style.display = "block";
+		}
+
+		function w3_close() {
+			document.getElementById("mySidebar").style.display = "none";
+		}
+	</script>
+
+</body>
+
+</html>

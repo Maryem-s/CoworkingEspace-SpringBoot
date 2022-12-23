@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Ajout</title>
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cosmo/bootstrap.min.css"/>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" ></script>
+</head>
+<body>
+<div align="center">
+    <h1>Create New Espace</h1>
+    <br/>
+     <div class="col-sm-4">
+    <form action="#" th:action="@{/account/save}" th:object="${Espace}" method="post">
+
+      
+ 	<div alight="left">
+            <tr>
+                <label class="form-label">Espace Name</label>
+                <td>
+	                <input type="hidden" th:field="*{ref_espace}"/>
+	                <input type="text" th:field="*{name}" class="form-control" placeholder="Espace Name"/>
+                </td>
+            </tr>
+         </div>   
+         
+         
+          <div alight="left">
+            <tr>
+                <label class="form-label" >Disponibilité</label>
+                
+                <td>
+                 <input type="text" th:field="*{date_debut}" class="form-control" placeholder="Date de debut"/>
+                </td>
+            </tr>
+              <tr>
+                
+                <td>
+                 <input type="text" th:field="*{date_fin}" class="form-control" placeholder="Date fin"/>
+                </td>
+            </tr>
+               
+            
+         </div>  
+         
+
+	<br>
+            <tr>
+            <td colspan="2"><button type="submit" class="btn btn-info">Save</button> </td>
+            </tr>
+
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+  
+    .container{
+    font-family:"Times New Roman";
+    font-size:20px;
+flex: left;    
+     
+    
+    }
+    .div1
+    {display: inline-block;
+    position: relative;
+}
+    .div1 .text {
+      background: rgba(133, 133, 133, 0.8);
+      z-index: 1;
+      position: absolute;
+      text-align: center;
+      font-family:'Lucida Sans';
+      margin: 0 auto;
+      left: 0;
+      right: 0;
+      top: 25%;
+      color: white;
+      width: 70%;}
+    .img1{
+      height:400px;
+      width:1348px;
+      }
+    
+    #num{
+    background-color: yellow; 
+    height:30px;
+    width:30px;
+    }
+    
+    .color-nav{
+        background-color:grey;
+    }
+    
+    #bloc{
+    background-color: yellow; 
+    height:200px;
+    width:350px;
+    }
+    .titre{font-weight:bold;}

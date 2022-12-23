@@ -1,0 +1,48 @@
+.positioned {
+    position:absolute;
+    
+    height:150px;
+    width:350px;
+    top: 1000px;
+    right: 30px;
+    text-align:center;
+  
+   }
+  
+  
+#img1{
+    height:550px;
+    width:1348px;
+    }
+    
+    body{
+    
+    font-family:"Times New Roman";
+    font-size:25px;
+    
+      left:8px;
+    
+    }
+    
+    #num{
+        
+    background-color: yellow; 
+    height:30px;
+    width:30px;
+    
+    }
+    
+    .color-nav{
+        background-color:grey;
+    }
+    
+    #bloc{
+    background-color: yellow; 
+    height:200px;
+    width:350px;
+    }
+  
+  table {
+    border-spacing: 20px;
+  
+  }

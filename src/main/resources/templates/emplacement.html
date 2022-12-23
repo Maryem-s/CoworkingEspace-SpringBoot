@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Emplacements</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+</style>
+</head>
+<body>
+
+<!-- menu  -->
+<nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+        
+        
+  <img src="/resources/img/logo.png" width="100" height="100" class="d-inline-block align-top" alt="">
+  
+
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+<ul class="navbar-nav mr-auto">
+  <li class="nav-item active">
+    <a class="nav-link" href="index">Acceuil <span class="sr-only"><span></a>
+  </li>
+  
+  <li class="nav-item">
+      <a class="nav-link" href="propos">A Propos</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="emplacement">Emplacements</a>
+    </li>
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+     Nos Services
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="Domiciliation">Domicilation</a>
+        <a class="dropdown-item" href="Cowork">Coworking</a>
+      </div>
+    </div>
+  
+</ul>
+<form class="form-inline my-2 my-lg-0">
+  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+</form>
+<li class="nav-item">
+  <a class="nav-link" href="connexion" style="color: white;" >Connexion</a>
+</li>
+<img src="/resources/img/icon contact.png" width="30" height="30" class="d-inline-block align-top" alt="">
+
+
+</div>
+</nav>
+
+
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:px;margin-right:600px">
+
+  <!-- Header -->
+  <div class="w3-container" style="margin-top:80px" id="showcase">
+    <h1 class="w3-jumbo"><b>Travail Partagée</b></h1>
+    <h1 class="w3-large w3-text-black"><img src="/resources/img/lieu.png" style="width: 25px;"><b>Avenu de l'Euro,Berges du lac,Tunis,Tunisia</b></h1>
+  </div>
+  
+  <!-- Photo grid (modal) -->
+  <div class="w3-row-padding">
+    <div class="w3-half">
+      <img src="/resources/img/emp.jpg" style="width:100%" onclick="onClick(this)" >
+      <img src="/resources/img/emp3.jpg" style="width:100%" onclick="onClick(this)" >
+    </div>
+
+    <div class="w3-half">
+      <img src="/resources/img/emp2.jpg" style="width:100%" onclick="onClick(this)" >
+      <img src="/resources/img/emp4.jpg" style="width:100%" onclick="onClick(this)" >
+    </div>
+  </div>
+
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+
+  <!-- Equipements -->
+  <div class="w3-container" id="services" style="margin-top:75px">
+    <h1 class="w3-xxlarge w3-text-black"><b>Equipements</b></h1>
+    <p>Services de nettoyage renforcés
+
+      Dans le cadre de notre engagement à fournir un lieu de travail sain et confortable, WeWork a mis en place des mesures de nettoyage renforcées, notamment pour les surfaces fréquemment touchées et les zones à forte fréquentation.
+    </p>
+    
+  
+  </div>
+  
+ 
+  <div class=" w3-text-black" style="margin-left:800px" id="showcase">
+    <center> <h1 style="font-size: 30px;"><b>Cet Etablissement vous <br>intéressez?</b></h1>
+    <form >
+      <ul style="list-style-type: none;">
+     <li><a th:href="@{'emplacement/ajouterReservation'}"><input type="button" style="background-color: red; color:white;   padding: 15px 100px;border: none;" value="Reserver"><a/></li><br>
+      <li><a th:href="@{'emplacement/supprimerReservation/'+${Reservation.id_reserv}}"><input type="button" style="background-color: blue; color:white; padding: 15px 55px;border: none;" value="Annuler Reservation"><a/></li><br>
+	<li><a th:href="@{'emplacement/modifierReservation/'+${Reservation.id_reserv}}"><input type="button" style="background-color: red; color:white;   padding: 15px 100px;border: none;" value="Modifier Reservation"><a/></li><br>
+
+    </ul>
+    </form>
+  </center>
+</div>
+</div>
+<!-- Footer -->
+	<footer style="background-color: rgb(58, 53, 53);width: 100%;" class="w3-row-padding w3-padding-32">
+		<div style="color: white;" class="w3-third">
+			<h3>About Company</h3>
+			<img src="/resources/img/logo.png" class="w3-left w3-margin-right" style="width:100px">
+
+		</div>
+
+		<div style="color: white;" class="w3-third">
+			<h3>Informations</h3>
+			<ul type="circle" class="w3-ul w3-hoverable">
+				<li class="w3-padding-16">
+
+					<span class="w3-large"><a class="dropdown-item" href="propos"></a>A Propos</span><br>
+				</li>
+				<li class="w3-padding-16">
+
+					<span class="w3-large"><a class="dropdown-item"
+							href="Domiciliation"></a>Domiciliation</span><br>
+				</li>
+				<li>
+					<span class="w3-large"><a class="dropdown-item" href="Cowork"></a>Coworking</span><br>
+
+				</li>
+				<li>
+					<span class="w3-large"><a class="dropdown-item" href="connexion"></a>Connexion</span><br>
+
+				</li>
+			</ul>
+		</div>
+
+		<div style="color: white;" class="w3-third w3-serif">
+			<h3>Nos Cordonnées</h3>
+			<ul style="list-style-type: none;">
+				<li><img src="/resources/img/phone icon.png" style="width:30px ;background-color: white;" /></li><br>
+				<li><img src="/resources/img/mail.png" style="width:30px ;background-color: white;" /></li><br>
+				<li><img src="/resources/img/lieu.png" style="width:30px ; background-color: white;" /></li><br>
+
+
+				<li><img src="/resources/img/fcb.png" style="width:30px ;background-color: white;" /></li><br>
+				<li><img src="/resources/img/insta.png" style="width:30px ;background-color: white;" /></li><br>
+				<li><img src="/resources/img/twit.png" style="width:30px ; background-color: white;" /></li>
+
+			</ul>
+		</div>
+	</footer>
+    
+   
+
+  
+
+    
+
+<!-- End page content -->
+
+
+<!-- W3.CSS Container -->
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+</script>
+
+</body>
+</html>

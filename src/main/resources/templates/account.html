@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Account</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
+.w3-bar-block .w3-bar-item {padding:20px}
+</style>
+<link href="./resources/css/style2.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+        
+        
+            <img src="./resources/img/logo.png" width="100" height="100" class="d-inline-block align-top" alt="">
+            
+        
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="index">Acceuil <span class="sr-only"><span></a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link" href="propos">A Propos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="">Emplacements</a>
+              </li>
+              <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+               Nos Services
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="Domiciliation">Coworking</a>
+                  <a class="dropdown-item" href="Cowork">Coworking</a>
+                </div>
+              </div>
+            
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+          <li class="nav-item">
+            <a style="color:white ;" class="nav-link" href="account">Compte</a>
+          </li>
+          <li class="nav-item">
+            <a style="color:white ;" class="nav-link"th:href="@{'/prop/modifier/'+${Proprietaire.id_prop}}">Modifier </a>
+          </li>
+          <li class="nav-item">
+            <a style="color:white ;" class="nav-link" th:href="@{'/supprimer/'+${Proprietaire.id_prop}}">Supprimer</a>
+          </li>
+          <img src="./resources/img/icon contact.png" width="30" height="30" class="d-inline-block align-top" alt="">
+
+
+        </div>
+      </nav>
+
+
+
+
+  
+<!-- !PAGE CONTENT! -->
+<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
+
+  <!-- First Photo Grid-->
+  <div class="w3-row-padding w3-padding-16 w3-center" id="food">
+    <div class="w3-quarter">
+      <img src="./resources/img/1.jpg" alt="Sandwich" style="width:100%" usemap="#map1" >
+       <button type="button"><img src="./resources/img/modifie.jpeg" style="width:40px;"></button>
+      <button type="button"><img src="./resources/img/trash.png" style="width:30px;"></button>
+     <button type="button"> <img src="./resources/img/detail.png" style="width:30px;"></button>
+      <p></p>
+    </div>
+
+    <map name="map1">
+        <area href="javascript:void(0)" shape="circle" coords="240,180,140"
+          onClick="document.images[0].src = 'img/1.jpg'">
+        <area href="javascript:void(0)" shape="rect" coords="60,330,440,520"
+              onClick="document.images[0].src = 'https://www.xul.fr/images/collar.jpg'">
+       </map>
+       
+<!--<map name="map1">
+        <area href="asin1.jpg" shape="circle" coords="240,180,140">
+        <area href="collar.jpg'" shape="rect" coords="60,330,440,520" >
+    </map>-->
+
+    <div class="w3-quarter">
+      <img src="./resources/img/2.jpg" alt="Steak" style="width:100%" usemap="#map1" >
+      <button type="button"> <img src="./resources/img/modifie.jpeg" style="width:40px;"></button>
+      <button type="button"><img src="./resources/img/trash.png" style="width:30px;"></button>
+      <button type="button"><img src="./resources/img/detail.png" style="width:30px;"></button>
+      <p></p>
+    </div>
+    
+    <div class="w3-quarter">
+      <img src="./resources/img/3.jpg" alt="Cherries" style="width:100%">
+      <button type="button"><img src="./resources/img/modifie.jpeg" style="width:40px;"></button>
+      <button type="button"><img src="./resources/img/trash.png" style="width:30px;"></button>
+      <button type="button"><img src="./resources/img/detail.png" style="width:30px;"> </button>
+      <p></p>
+      <p></p>
+    </div>
+    <div class="w3-quarter">
+      <img src="./resources/img/4.jpg" alt="Pasta and Wine" style="width:100%">
+      <button type="button"><img src="./resources/img/modifie.jpeg" style="width:40px;"></button>
+      <button type="button"><img src="./resources/img/trash.png" style="width:30px;"></button>
+      <button type="button"><img src="./resources/img/detail.png" style="width:30px;"></button>
+      <p></p>
+    </div>
+  </div>
+  
+  <!-- Second Photo Grid-->
+  <div class="w3-row-padding w3-padding-16 w3-center">
+    <div class="w3-quarter">
+      <img src="./resources/img/5.jpg" alt="Popsicle" style="width:100%">
+      <button type="button"><img src="./resources/img/modifie.jpeg" style="width:40px;"></button>
+      <button type="button"><img src="./resources/img/trash.png" style="width:30px;"></button>
+      <button type="button"><img src="./resources/img/detail.png" style="width:30px;"></button>
+      <p></p>
+    </div>
+    <div class="w3-quarter">
+      <img src="./resources/img/6.jpg" alt="Salmon" style="width:100%"></button>
+      <button type="button"><img src="./resources/img/modifie.jpeg" style="width:40px;"></button>
+      <button type="button"><img src="./resources/img/trash.png" style="width:30px;"></button>
+      <button type="button"><img src="./resources/img/detail.png" style="width:30px;"></button>
+      <p></p>
+    </div>
+    <div class="w3-quarter">
+      <img src="./resources/img/7.jpg" alt="Sandwich" style="width:100%">
+      <button type="button"><img src="./resources/img/modifie.jpeg" style="width:40px;"></button>
+      <button type="button"><img src="./resources/img/trash.png" style="width:30px;"></button>
+      <button type="button"><img src="./resources/img/detail.png" style="width:30px;"></button>
+      <p></p>
+    </div>
+    <div class="w3-quarter">
+      <a th:href="@{'/account/ajouterEspace'}"><img src="./resources/img/ajout.png" alt="Croissant" style="width:100%"><a/>  
+       </a/>
+
+
+      <p></p>
+    </div>
+  </div>
+
+  
+
+ 
+  <!-- Footer -->
+  <footer style="background-color: rgb(58, 53, 53);width: 100%;"  class="w3-row-padding w3-padding-32">
+    <div style="color: white;"class="w3-third">
+      <h3>About Company</h3>
+      <img src="./resources/img/logo.png" class="w3-left w3-margin-right" style="width:100px">
+
+    </div>
+  
+    <div style="color: white;" class="w3-third">
+      <h3>Informations</h3>
+      <ul type="circle" class="w3-ul w3-hoverable">
+        <li class="w3-padding-16">
+    
+          <span class="w3-large"><a class="dropdown-item" href="propos"></a>A Propos</span><br>
+        </li>
+        <li class="w3-padding-16">
+    
+          <span class="w3-large"><a class="dropdown-item" href="Domiciliation"></a>Domiciliation</span><br>
+        </li>
+        <li >
+          <span class="w3-large"><a class="dropdown-item" href="Cowork"></a>Coworking</span><br>
+
+        </li> 
+        <li >
+          <span class="w3-large"><a class="dropdown-item" href="Connexion"></a>Connexion</span><br>
+
+        </li> 
+      </ul>
+    </div>
+
+    <div style="color: white;"class="w3-third w3-serif">
+      <h3>Nos Cordonnées</h3>
+      <ul style="list-style-type: none;">
+        <li><img src="./resources/img/phone icon.png" style="width:30px ;background-color: white;" /></li>
+        <li></li><br>
+        <li><img src="./resources/img/lieu.png" style="width:30px ; background-color: white;"/></li><br>
+ 
+  
+       <li><img src="./resources/img/socialmedia.png" style="width:60px ; background-color: white;"/></li>
+
+     </ul>
+    </div>
+  </footer>
+
+
+<!-- End page content -->
+</div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+
+</body>
+</html>
